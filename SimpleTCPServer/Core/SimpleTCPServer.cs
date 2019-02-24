@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using TCPServer.Logging;
 using static SimpleTCPServer.Extensions.Methods;
-namespace TCPServer.Core
+namespace SimpleTCPServer.Core
 {
     /// <summary>
     /// The main class for creating a simple tcp server

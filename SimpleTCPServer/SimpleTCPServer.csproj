@@ -4,6 +4,14 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <ApplicationIcon />
     <Win32Resource />
+    <Description>A simple way to make a TCP server and contains methods relating to conversions</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/Bluheir/SimpleTCPServer</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>tcp,tcpserver,networking,net,.net,sockets,c#, C#,TCP,simple,simple tcp,simpletcp,simpletcpserver,easy,easy networking,easynetworking</PackageTags>
+    <PackageReleaseNotes>The first version</PackageReleaseNotes>
+    <Authors>Christopher</Authors>
+    <Company />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -1,4 +1,4 @@
-﻿namespace TCPServer.Core
+﻿namespace SimpleTCPServer.Core
 {
     /// <summary>
     /// A struct for storing the settings of the TCP server
