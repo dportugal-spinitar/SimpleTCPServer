@@ -12,6 +12,9 @@
     <PackageReleaseNotes>The first version</PackageReleaseNotes>
     <Authors>Christopher</Authors>
     <Company />
+    <Version>1.0.0.3</Version>
+    <FileVersion>1.0.0.3</FileVersion>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

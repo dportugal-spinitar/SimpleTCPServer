@@ -1,4 +1,4 @@
-﻿namespace TCPServer.Logging
+﻿namespace SimpleTCPServer.Logging
 {
     /// <summary>
     /// A log message

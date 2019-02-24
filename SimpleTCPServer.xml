@@ -4,32 +4,32 @@
         <name>SimpleTCPServer</name>
     </assembly>
     <members>
-        <member name="T:TCPServer.Core.SimpleTCPServer">
+        <member name="T:SimpleTCPServer.Core.TCPServer">
             <summary>
             The main class for creating a simple tcp server
             </summary>
         </member>
-        <member name="M:TCPServer.Core.SimpleTCPServer.#ctor(System.Net.IPEndPoint,TCPServer.Core.TCPServerConfig)">
+        <member name="M:SimpleTCPServer.Core.TCPServer.#ctor(System.Net.IPEndPoint,SimpleTCPServer.Core.TCPServerConfig)">
             <summary>
             Initializes this class with an IPEndpoint and config
             </summary>
             <param name="endpoint">The IPEndpoint</param>
             <param name="config">The configuration</param>
         </member>
-        <member name="M:TCPServer.Core.SimpleTCPServer.#ctor(System.Net.IPEndPoint)">
+        <member name="M:SimpleTCPServer.Core.TCPServer.#ctor(System.Net.IPEndPoint)">
             <summary>
             Initializes this class with an IPEndpoint
             </summary>
             <param name="endpoint">The ipendpoint</param>
         </member>
-        <member name="M:TCPServer.Core.SimpleTCPServer.#ctor(System.Net.IPAddress,System.Int32)">
+        <member name="M:SimpleTCPServer.Core.TCPServer.#ctor(System.Net.IPAddress,System.Int32)">
             <summary>
             Initializes this class with an IPAddress and port
             </summary>
             <param name="address">The IPAddress</param>
             <param name="port">The port</param>
         </member>
-        <member name="M:TCPServer.Core.SimpleTCPServer.#ctor(System.Net.IPAddress,System.Int32,TCPServer.Core.TCPServerConfig)">
+        <member name="M:SimpleTCPServer.Core.TCPServer.#ctor(System.Net.IPAddress,System.Int32,SimpleTCPServer.Core.TCPServerConfig)">
             <summary>
             Intitializes this class with an IPAddress, port and config
             </summary>
@@ -37,14 +37,14 @@
             <param name="port">The port</param>
             <param name="config">The configuration</param>
         </member>
-        <member name="M:TCPServer.Core.SimpleTCPServer.#ctor(System.String,System.Int32)">
+        <member name="M:SimpleTCPServer.Core.TCPServer.#ctor(System.String,System.Int32)">
             <summary>
             Initializes this class with a string address and a port
             </summary>
             <param name="address">The string ip address</param>
             <param name="port">The port</param>
         </member>
-        <member name="M:TCPServer.Core.SimpleTCPServer.#ctor(System.String,System.Int32,TCPServer.Core.TCPServerConfig)">
+        <member name="M:SimpleTCPServer.Core.TCPServer.#ctor(System.String,System.Int32,SimpleTCPServer.Core.TCPServerConfig)">
             <summary>
             Initializes this class with a string address, a port and a config
             </summary>
@@ -52,112 +52,67 @@
             <param name="port">The port</param>
             <param name="config">The configuration</param>
         </member>
-        <member name="M:TCPServer.Core.SimpleTCPServer.#ctor(System.String)">
+        <member name="M:SimpleTCPServer.Core.TCPServer.#ctor(System.String)">
             <summary>
             Initializes this class with an IPEndpoint string
             </summary>
             <param name="ipendpoint">The IPEndpoint string</param>
         </member>
-        <member name="M:TCPServer.Core.SimpleTCPServer.#ctor(System.String,TCPServer.Core.TCPServerConfig)">
+        <member name="M:SimpleTCPServer.Core.TCPServer.#ctor(System.String,SimpleTCPServer.Core.TCPServerConfig)">
             <summary>
             Initializes this class with a string which contains the ip and port and a config
             </summary>
             <param name="ipendpoint">The IPEndpoint string</param>
             <param name="config">The configuration</param>
         </member>
-        <member name="P:TCPServer.Core.SimpleTCPServer.Endpoint">
+        <member name="P:SimpleTCPServer.Core.TCPServer.Endpoint">
             <summary>
             The ip endpoint
             </summary>
         </member>
-        <member name="M:TCPServer.Core.SimpleTCPServer.Start">
+        <member name="M:SimpleTCPServer.Core.TCPServer.Start">
             <summary>
             Starts everything in the server
             </summary>
         </member>
-        <member name="P:TCPServer.Core.SimpleTCPServer.Config">
+        <member name="P:SimpleTCPServer.Core.TCPServer.Config">
             <summary>
             The config for the tcp server
             </summary>
         </member>
-        <member name="P:TCPServer.Core.SimpleTCPServer.Log">
+        <member name="P:SimpleTCPServer.Core.TCPServer.Log">
             <summary>
             The log Task
             </summary>
         </member>
-        <member name="P:TCPServer.Core.SimpleTCPServer.OnReady">
+        <member name="P:SimpleTCPServer.Core.TCPServer.OnReady">
             <summary>
             The event thats fired when the server is listening
             </summary>
         </member>
-        <member name="P:TCPServer.Core.SimpleTCPServer.OnClientConnect">
+        <member name="P:SimpleTCPServer.Core.TCPServer.OnClientConnect">
             <summary>
             The event thats fired when a client connects
             </summary>
         </member>
-        <member name="P:TCPServer.Core.SimpleTCPServer.OnClientLeave">
+        <member name="P:SimpleTCPServer.Core.TCPServer.OnClientLeave">
             <summary>
             The event thats fired when a client leaves
             </summary>
         </member>
-        <member name="P:TCPServer.Core.SimpleTCPServer.BytesReceived">
+        <member name="P:SimpleTCPServer.Core.TCPServer.BytesReceived">
             <summary>
             The event thats fired when bytes are received
             </summary>
         </member>
-        <member name="T:TCPServer.Core.TCPServerConfig">
+        <member name="T:SimpleTCPServer.Core.TCPServerConfig">
             <summary>
             A struct for storing the settings of the TCP server
             </summary>
         </member>
-        <member name="P:TCPServer.Core.TCPServerConfig.BytesSize">
+        <member name="P:SimpleTCPServer.Core.TCPServerConfig.BytesSize">
             <summary>
             The byte array size
-            </summary>
-        </member>
-        <member name="T:TCPServer.Logging.ILogMessage">
-            <summary>
-            A log message
-            </summary>
-        </member>
-        <member name="P:TCPServer.Logging.ILogMessage.Content">
-            <summary>
-            The content
-            </summary>
-        </member>
-        <member name="P:TCPServer.Logging.ILogMessage.Source">
-            <summary>
-            The source of the log message
-            </summary>
-        </member>
-        <member name="P:TCPServer.Logging.ILogMessage.Type">
-            <summary>
-            The type of the log message
-            </summary>
-        </member>
-        <member name="T:TCPServer.Logging.LogMessageType">
-            <summary>
-            The log message's type
-            </summary>
-        </member>
-        <member name="F:TCPServer.Logging.LogMessageType.ClientConnected">
-            <summary>
-            A user joined
-            </summary>
-        </member>
-        <member name="F:TCPServer.Logging.LogMessageType.BytesReceived">
-            <summary>
-            Bytes are received
-            </summary>
-        </member>
-        <member name="F:TCPServer.Logging.LogMessageType.ServerReady">
-            <summary>
-            The server is ready/listening for connections
-            </summary>
-        </member>
-        <member name="F:TCPServer.Logging.LogMessageType.ClientDisconnected">
-            <summary>
-            A client has left
             </summary>
         </member>
         <member name="T:SimpleTCPServer.Extensions.Methods">
@@ -186,6 +141,51 @@
             <typeparam name="T">The type to convert the byte array to</typeparam>
             <param name="arrBytes">The byte array</param>
             <returns>Returns the byte array converted to the specified type</returns>
+        </member>
+        <member name="T:SimpleTCPServer.Logging.ILogMessage">
+            <summary>
+            A log message
+            </summary>
+        </member>
+        <member name="P:SimpleTCPServer.Logging.ILogMessage.Content">
+            <summary>
+            The content
+            </summary>
+        </member>
+        <member name="P:SimpleTCPServer.Logging.ILogMessage.Source">
+            <summary>
+            The source of the log message
+            </summary>
+        </member>
+        <member name="P:SimpleTCPServer.Logging.ILogMessage.Type">
+            <summary>
+            The type of the log message
+            </summary>
+        </member>
+        <member name="T:SimpleTCPServer.Logging.LogMessageType">
+            <summary>
+            The log message's type
+            </summary>
+        </member>
+        <member name="F:SimpleTCPServer.Logging.LogMessageType.ClientConnected">
+            <summary>
+            A user joined
+            </summary>
+        </member>
+        <member name="F:SimpleTCPServer.Logging.LogMessageType.BytesReceived">
+            <summary>
+            Bytes are received
+            </summary>
+        </member>
+        <member name="F:SimpleTCPServer.Logging.LogMessageType.ServerReady">
+            <summary>
+            The server is ready/listening for connections
+            </summary>
+        </member>
+        <member name="F:SimpleTCPServer.Logging.LogMessageType.ClientDisconnected">
+            <summary>
+            A client has left
+            </summary>
         </member>
     </members>
 </doc>

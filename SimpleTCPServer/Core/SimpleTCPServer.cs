@@ -3,21 +3,21 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
-using TCPServer.Logging;
+using SimpleTCPServer.Logging;
 using static SimpleTCPServer.Extensions.Methods;
 namespace SimpleTCPServer.Core
 {
     /// <summary>
     /// The main class for creating a simple tcp server
     /// </summary>
-    public class SimpleTCPServer
+    public class TCPServer
     {
         /// <summary>
         /// Initializes this class with an IPEndpoint and config
         /// </summary>
         /// <param name="endpoint">The IPEndpoint</param>
         /// <param name="config">The configuration</param>
-        public SimpleTCPServer(IPEndPoint endpoint, TCPServerConfig config)
+        public TCPServer(IPEndPoint endpoint, TCPServerConfig config)
         {
             _endpoint = endpoint;
             Config = config;
@@ -26,7 +26,7 @@ namespace SimpleTCPServer.Core
         /// Initializes this class with an IPEndpoint
         /// </summary>
         /// <param name="endpoint">The ipendpoint</param>
-        public SimpleTCPServer(IPEndPoint endpoint)
+        public TCPServer(IPEndPoint endpoint)
         {
             _endpoint = endpoint;
         }
@@ -35,7 +35,7 @@ namespace SimpleTCPServer.Core
         /// </summary>
         /// <param name="address">The IPAddress</param>
         /// <param name="port">The port</param>
-        public SimpleTCPServer(IPAddress address, int port)
+        public TCPServer(IPAddress address, int port)
         {
             _endpoint = new IPEndPoint(address, port);
         }
@@ -45,7 +45,7 @@ namespace SimpleTCPServer.Core
         /// <param name="address">The ip address</param>
         /// <param name="port">The port</param>
         /// <param name="config">The configuration</param>
-        public SimpleTCPServer(IPAddress address, int port, TCPServerConfig config)
+        public TCPServer(IPAddress address, int port, TCPServerConfig config)
         {
             _endpoint = new IPEndPoint(address, port);
             Config = config;
@@ -55,7 +55,7 @@ namespace SimpleTCPServer.Core
         /// </summary>
         /// <param name="address">The string ip address</param>
         /// <param name="port">The port</param>
-        public SimpleTCPServer(string address, int port)
+        public TCPServer(string address, int port)
         {
             _endpoint = new IPEndPoint(IPAddress.Parse(address), port);
         }
@@ -65,7 +65,7 @@ namespace SimpleTCPServer.Core
         /// <param name="address">The string ip address</param>
         /// <param name="port">The port</param>
         /// <param name="config">The configuration</param>
-        public SimpleTCPServer(string address, int port, TCPServerConfig config)
+        public TCPServer(string address, int port, TCPServerConfig config)
         {
             _endpoint = new IPEndPoint(IPAddress.Parse(address), port);
             Config = config;
@@ -74,7 +74,7 @@ namespace SimpleTCPServer.Core
         /// Initializes this class with an IPEndpoint string
         /// </summary>
         /// <param name="ipendpoint">The IPEndpoint string</param>
-        public SimpleTCPServer(string ipendpoint)
+        public TCPServer(string ipendpoint)
         {
             _endpoint = CreateIPEndPoint(ipendpoint);
         }
@@ -83,7 +83,7 @@ namespace SimpleTCPServer.Core
         /// </summary>
         /// <param name="ipendpoint">The IPEndpoint string</param>
         /// <param name="config">The configuration</param>
-        public SimpleTCPServer(string ipendpoint, TCPServerConfig config)
+        public TCPServer(string ipendpoint, TCPServerConfig config)
         {
             _endpoint = CreateIPEndPoint(ipendpoint);
             Config = config;
