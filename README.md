@@ -8,6 +8,7 @@ The main namespace is `SimpleTCPServer.Core`. This provides the main class, `TCP
 using SimpleTCPServer.Core;
 using System.Net.Sockets;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace TestServerNamespace
 {
