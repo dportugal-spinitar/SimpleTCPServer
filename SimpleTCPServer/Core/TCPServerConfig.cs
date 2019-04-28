@@ -1,7 +1,7 @@
 ﻿namespace SimpleTCPServer.Core
 {
     /// <summary>
-    /// A structure for storing the settings of the TCP server
+    /// A class for storing the settings of the TCP server
     /// </summary>
 	[System.Serializable]
     public class TCPServerConfig
