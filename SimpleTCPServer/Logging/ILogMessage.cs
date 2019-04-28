@@ -21,6 +21,7 @@
     /// <summary>
     /// The log message's type
     /// </summary>
+	[System.Serializable]
     public enum LogMessageType : int
     {
         /// <summary>
