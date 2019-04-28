@@ -37,8 +37,8 @@ namespace SimpleTCPServer.Extensions
                     throw new FormatException("Invalid ip-adress");
                 }
             }
-            int port;
-            if (!int.TryParse(ep[ep.Length - 1], NumberStyles.None, NumberFormatInfo.CurrentInfo, out port))
+            
+            if (!int.TryParse(ep[ep.Length - 1], NumberStyles.None, NumberFormatInfo.CurrentInfo, out int port))
             {
                 throw new FormatException("Invalid port");
             }
