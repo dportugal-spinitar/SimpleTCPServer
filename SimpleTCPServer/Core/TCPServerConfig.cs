@@ -1,13 +1,18 @@
 ﻿namespace SimpleTCPServer.Core
 {
     /// <summary>
-    /// A struct for storing the settings of the TCP server
+    /// A structure for storing the settings of the TCP server
     /// </summary>
-    public struct TCPServerConfig
+	[System.Serializable]
+    public class TCPServerConfig
     {
         /// <summary>
         /// The byte array size
         /// </summary>
         public int BytesSize { get; set; }
+		/// <summary>
+		/// Keep a collection of the connected clients
+		/// </summary>
+		public bool KeepListOfClients { get; set; }
     }
 }
