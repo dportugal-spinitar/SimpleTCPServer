@@ -1,7 +1,7 @@
 # SimpleTCPServer
 A way to create a simple C# TCP server with events and with useful methods
 
-##How to use
+## How to use
 The main namespace is `SimpleTCPServer.Core`. This provides the main class, `TCPServer` for you to use. Here is an example of how to use this class.
 ```
 //Server Side
