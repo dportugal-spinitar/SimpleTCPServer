@@ -39,6 +39,11 @@
         /// <summary>
         /// A client has left
         /// </summary>
-        ClientDisconnected
+        ClientDisconnected,
+
+        /// <summary>
+        /// Server has been stopped
+        /// </summary>
+        ServerStopped
     }
 }

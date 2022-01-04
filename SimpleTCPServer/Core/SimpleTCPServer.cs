@@ -103,12 +103,50 @@ namespace SimpleTCPServer.Core
 			if (isStarted)
 				return;
 
-			CancellationTokenSource src = new CancellationTokenSource();
-			_taskholders.Add(++_tasks, new TaskHolder(src, TaskType.User));
-			Task b = Task.Factory.StartNew(() => _onStart(), src.Token);
+			StartServerCancellationToken = new CancellationTokenSource();
+			_taskholders.Add(++_tasks, new TaskHolder(StartServerCancellationToken, TaskType.User));
+			Task b = Task.Factory.StartNew(() => _onStart(), StartServerCancellationToken.Token);
 
 			isStarted = true;
 			await b;
+        }
+
+        private CancellationTokenSource StartServerCancellationToken;
+
+        /// <summary>
+        /// Stop server
+        /// </summary>
+        /// <returns></returns>
+        public async Task StopAsync()
+        {
+            if (isStarted)
+            {                               
+                foreach (var item in _taskholders)
+                {
+                    if (item.Value != null)
+                        if (!item.Value.TokenSource.IsCancellationRequested)
+                            item.Value.TokenSource.Cancel();
+                }
+                _taskholders.Clear();
+
+                foreach (TcpClient client in _clients)
+                {
+                    if (client != null)
+                    {
+                        if (client.Connected)
+                        {
+                            client.GetStream().Close();
+                            client.Close();
+                        }
+                        client.Dispose();
+                    }
+                }
+
+                StartServerCancellationToken.Cancel();
+                _listener.Stop();
+                isStarted = false;
+                await _log("Stopped","Server", LogMessageType.ServerStopped);                
+            }
         }
 
 		private bool isStarted = false;
